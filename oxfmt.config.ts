@@ -5,5 +5,10 @@ export default defineConfig({
   semi: true,
   singleQuote: false,
   sortImports: true,
-  ignorePatterns: ["coverage/**", "node_modules/**", "pnpm-lock.yaml"],
+  ignorePatterns: [
+    "coverage/**",
+    "node_modules/**",
+    "CHANGELOG.md",
+    "pnpm-lock.yaml",
+  ],
 });
