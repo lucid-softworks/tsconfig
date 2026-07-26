@@ -1,6 +1,6 @@
 {
   "name": "@lucid-softworks/tsconfig",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Shared strict TypeScript configuration for Lucid Softworks packages.",
   "homepage": "https://github.com/lucid-softworks/tsconfig#readme",
   "bugs": {
