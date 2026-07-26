@@ -1,0 +1,16 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    uses: lucid-softworks/.github/.github/workflows/npm-publish.yml@v1
+    permissions:
+      contents: read
+      id-token: write

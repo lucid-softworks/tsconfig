@@ -1,0 +1,53 @@
+{
+  "name": "@lucid-softworks/tsconfig",
+  "version": "0.1.0",
+  "description": "Shared strict TypeScript configuration for Lucid Softworks packages.",
+  "homepage": "https://github.com/lucid-softworks/tsconfig#readme",
+  "bugs": {
+    "url": "https://github.com/lucid-softworks/tsconfig/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucid-softworks/tsconfig.git"
+  },
+  "files": [
+    "base.json",
+    "test.json",
+    "web.json",
+    "README.md"
+  ],
+  "type": "module",
+  "exports": {
+    "./base.json": "./base.json",
+    "./test.json": "./test.json",
+    "./web.json": "./web.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "bench": "vitest bench --run",
+    "bench:smoke": "VITEST_BENCHMARK_SMOKE=1 vitest bench --run",
+    "check": "oxfmt --check . && oxlint . && tsc -p tsconfig.json && vitest run && publint && VITEST_BENCHMARK_SMOKE=1 vitest bench --run",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint .",
+    "pack:check": "publint",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.1",
+    "oxfmt": "0.60.0",
+    "oxlint": "1.75.0",
+    "publint": "0.3.22",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.16.0"
+}
