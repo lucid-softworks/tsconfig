@@ -8,6 +8,7 @@ export default defineConfig({
   ignorePatterns: [
     "coverage/**",
     "node_modules/**",
+    ".release-please-manifest.json",
     "CHANGELOG.md",
     "pnpm-lock.yaml",
   ],
